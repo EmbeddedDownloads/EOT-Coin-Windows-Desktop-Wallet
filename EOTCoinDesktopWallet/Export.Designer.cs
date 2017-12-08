@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Export));
             this.DashboardButton = new System.Windows.Forms.Button();
             this.PasswordLabel = new System.Windows.Forms.Label();
@@ -35,6 +36,10 @@
             this.ExportButton = new System.Windows.Forms.Button();
             this.seedLabel = new System.Windows.Forms.Label();
             this.seedTextBox = new System.Windows.Forms.TextBox();
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DashboardButton
@@ -99,11 +104,35 @@
             this.seedTextBox.Visible = false;
             this.seedTextBox.TextChanged += new System.EventHandler(this.seedTextBox_TextChanged);
             // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(781, 386);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(0, 17);
+            this.ConnectedLabel.TabIndex = 6;
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(833, 386);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 7;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // ConnectedTimer
+            // 
+            this.ConnectedTimer.Enabled = true;
+            this.ConnectedTimer.Interval = 1500;
+            this.ConnectedTimer.Tick += new System.EventHandler(this.ConnectedTimer_Tick);
+            // 
             // Export
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 415);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.seedTextBox);
             this.Controls.Add(this.seedLabel);
             this.Controls.Add(this.ExportButton);
@@ -116,6 +145,7 @@
             this.Name = "Export";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Export";
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +159,8 @@
         private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.Label seedLabel;
         private System.Windows.Forms.TextBox seedTextBox;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
+        private System.Windows.Forms.Timer ConnectedTimer;
     }
 }

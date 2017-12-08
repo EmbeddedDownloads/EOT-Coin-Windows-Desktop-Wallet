@@ -15,6 +15,9 @@ namespace EOTCoinDesktopWallet
     class Utilities
     {
         const string fileName = "wallet.eot";
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int description, int reservedValue);
+
         //  Call this function to remove the key from memory after use for security
         [DllImport("KERNEL32.DLL", EntryPoint = "RtlZeroMemory")]
         public static extern bool ZeroMemory(IntPtr Destination, int Length);
@@ -92,6 +95,20 @@ namespace EOTCoinDesktopWallet
                 Console.WriteLine("Exception in AddressAmountUsingPrimaryAPI Method" + ex.ToString());
             }
             return 0;
+        }
+
+        public static bool CheckInternetConnectivity()
+        {
+            try
+            {
+                int description;
+                return InternetGetConnectedState(out description, 0);
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                return false;
+            }
         }
 
         public static void WriteWalletDat(Wallet wallet)

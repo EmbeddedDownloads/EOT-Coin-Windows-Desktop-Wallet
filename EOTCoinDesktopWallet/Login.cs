@@ -13,6 +13,11 @@ namespace EOTCoinDesktopWallet
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void LoginButton_Click(object sender, EventArgs e)
         {
             try
@@ -55,6 +60,22 @@ namespace EOTCoinDesktopWallet
                 System.Windows.Forms.MessageBox.Show("Login failed: " + ex.Message);
             }
             
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
         }
     }
 }

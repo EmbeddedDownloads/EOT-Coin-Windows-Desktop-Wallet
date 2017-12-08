@@ -21,7 +21,12 @@ namespace EOTCoinDesktopWallet
             this.Hide();
         }
 
-        private void ExportButton_Click(object sender, EventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+            private void ExportButton_Click(object sender, EventArgs e)
         {
             string password = PasswordTextBox.Text;
 
@@ -58,6 +63,22 @@ namespace EOTCoinDesktopWallet
         private void seedTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
         }
     }
 }
