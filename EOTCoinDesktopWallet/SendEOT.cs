@@ -18,7 +18,12 @@ namespace EOTCoinDesktopWallet
             InitializeComponent();
             SendingAddressTextBox.Text = sendingAddress;
         }
-        
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void SendButton_Click(object sender, EventArgs e)
         {
             
@@ -66,7 +71,7 @@ namespace EOTCoinDesktopWallet
                 //check balance first
                 if (Utilities.GetAddressBalance(eotWallet.eotAddress) >= (amount + Convert.ToDecimal(minerFees) + transactionFees))
                 {
-                   bool success =  PerformEOTTransaction(eotWallet.eotPrivateKey, eotWallet.eotAddress, vendorAddress, transactionFees, receivingAddress, amount, minerFees);
+                    bool success =  PerformEOTTransaction(eotWallet.eotPrivateKey, eotWallet.eotAddress, vendorAddress, transactionFees, receivingAddress, amount, minerFees);
                     if (success)
                     {
                         System.Windows.Forms.MessageBox.Show("Transaction successfully processed!");
@@ -74,8 +79,7 @@ namespace EOTCoinDesktopWallet
                     else
                     {
                         System.Windows.Forms.MessageBox.Show("Transaction failed: Not enough funds to process transaction!");
-                    }
-                                                          
+                    }                                   
                 }
                 else
                     System.Windows.Forms.MessageBox.Show("Not enough funds to process transaction!");
@@ -230,6 +234,22 @@ namespace EOTCoinDesktopWallet
                  //   System.Windows.Forms.MessageBox.Show("Amount must the numberic");
                 }
             
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
         }
     }
 }

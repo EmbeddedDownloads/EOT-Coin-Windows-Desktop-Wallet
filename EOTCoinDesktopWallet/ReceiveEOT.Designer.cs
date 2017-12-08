@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiveEOT));
             this.DashboardButton = new System.Windows.Forms.Button();
             this.SendButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.CopyClipboardButton = new System.Windows.Forms.Button();
-            this.QRCodePictureBox = new System.Windows.Forms.PictureBox();
             this.ScanLabel = new System.Windows.Forms.Label();
+            this.QRCodePictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DashboardButton
@@ -98,16 +103,6 @@
             this.CopyClipboardButton.UseVisualStyleBackColor = true;
             this.CopyClipboardButton.Click += new System.EventHandler(this.CopyClipboardButton_Click);
             // 
-            // QRCodePictureBox
-            // 
-            this.QRCodePictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.QRCodePictureBox.Location = new System.Drawing.Point(294, 219);
-            this.QRCodePictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.QRCodePictureBox.Name = "QRCodePictureBox";
-            this.QRCodePictureBox.Size = new System.Drawing.Size(248, 226);
-            this.QRCodePictureBox.TabIndex = 5;
-            this.QRCodePictureBox.TabStop = false;
-            // 
             // ScanLabel
             // 
             this.ScanLabel.AutoSize = true;
@@ -120,11 +115,45 @@
             this.ScanLabel.Text = "Scan the QR code below";
             this.ScanLabel.Click += new System.EventHandler(this.ScanLabel_Click);
             // 
+            // QRCodePictureBox
+            // 
+            this.QRCodePictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.QRCodePictureBox.Location = new System.Drawing.Point(294, 219);
+            this.QRCodePictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.QRCodePictureBox.Name = "QRCodePictureBox";
+            this.QRCodePictureBox.Size = new System.Drawing.Size(248, 226);
+            this.QRCodePictureBox.TabIndex = 5;
+            this.QRCodePictureBox.TabStop = false;
+            // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(706, 492);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(0, 17);
+            this.ConnectedLabel.TabIndex = 7;
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(768, 492);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 8;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // ConnectedTimer
+            // 
+            this.ConnectedTimer.Enabled = true;
+            this.ConnectedTimer.Interval = 1500;
+            this.ConnectedTimer.Tick += new System.EventHandler(this.ConnectedTimer_Tick);
+            // 
             // ReceiveEOT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 521);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.ScanLabel);
             this.Controls.Add(this.QRCodePictureBox);
             this.Controls.Add(this.CopyClipboardButton);
@@ -140,6 +169,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receive EOT Coins";
             ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +184,8 @@
         private System.Windows.Forms.Button CopyClipboardButton;
         private System.Windows.Forms.PictureBox QRCodePictureBox;
         private System.Windows.Forms.Label ScanLabel;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
+        private System.Windows.Forms.Timer ConnectedTimer;
     }
 }

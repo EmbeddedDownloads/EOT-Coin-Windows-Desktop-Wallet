@@ -42,6 +42,11 @@ namespace EOTCoinDesktopWallet
                 }
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void RandomCharsTextBox_TextChanged(object sender, EventArgs e)
         {
             int count = RandomCharsTextBox.Text.Length;
@@ -52,6 +57,22 @@ namespace EOTCoinDesktopWallet
             }
             else
                 remaininglabel.Text = "You can generate a wallet now!";
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
         }
     }
 }

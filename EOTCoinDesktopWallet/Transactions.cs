@@ -71,6 +71,11 @@ namespace EOTCoinDesktopWallet
             this.Hide();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void SendButton_Click(object sender, EventArgs e)
         {
             SendEOT sendeotform = new SendEOT(); 
@@ -104,8 +109,29 @@ namespace EOTCoinDesktopWallet
 
             this.Close();
         }
+        
+        private void ConnectedLabel_Click(object sender, EventArgs e)
+        {
 
-        private void timer1_Tick(object sender, EventArgs e)
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
+        }
+
+        private void updateTimer_Tick(object sender, EventArgs e)
         {
             decimal balance = Utilities.GetAddressBalance(EOTAddressLabel.Text);
             BalanceLabel2.Text = balance.ToString() + " EOT";

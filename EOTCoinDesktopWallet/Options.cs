@@ -34,12 +34,33 @@ namespace EOTCoinDesktopWallet
             this.Hide();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void GenerateWalletButton_Click(object sender, EventArgs e)
         {
             GenerateNewWallet newWallet = new GenerateNewWallet();
             newWallet.Show();
 
             this.Hide();
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
+            }
         }
     }
 }

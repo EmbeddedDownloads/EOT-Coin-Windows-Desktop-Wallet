@@ -39,7 +39,11 @@
             this.ReceiveButton = new System.Windows.Forms.Button();
             this.DashboardButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.UpdateTimer = new System.Windows.Forms.Timer(this.components);
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // BalanceLabel
@@ -136,7 +140,7 @@
             // RefreshButton
             // 
             this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.RefreshButton.Location = new System.Drawing.Point(492, 491);
+            this.RefreshButton.Location = new System.Drawing.Point(477, 496);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(75, 35);
             this.RefreshButton.TabIndex = 8;
@@ -144,17 +148,42 @@
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // timer1
+            // UpdateTimer
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 300000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.UpdateTimer.Enabled = true;
+            this.UpdateTimer.Interval = 300000;
+            this.UpdateTimer.Tick += new System.EventHandler(this.updateTimer_Tick);
+            // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(908, 519);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(0, 17);
+            this.ConnectedLabel.TabIndex = 9;
+            this.ConnectedLabel.Click += new System.EventHandler(this.ConnectedLabel_Click);
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(979, 519);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 10;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // ConnectedTimer
+            // 
+            this.ConnectedTimer.Enabled = true;
+            this.ConnectedTimer.Interval = 1500;
+            this.ConnectedTimer.Tick += new System.EventHandler(this.ConnectedTimer_Tick);
             // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 545);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.DashboardButton);
             this.Controls.Add(this.ReceiveButton);
@@ -172,6 +201,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EOT Coin Wallet";
             this.Load += new System.EventHandler(this.Transactions_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +218,9 @@
         private System.Windows.Forms.Button ReceiveButton;
         private System.Windows.Forms.Button DashboardButton;
         private System.Windows.Forms.Button RefreshButton;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer UpdateTimer;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
+        private System.Windows.Forms.Timer ConnectedTimer;
     }
 }

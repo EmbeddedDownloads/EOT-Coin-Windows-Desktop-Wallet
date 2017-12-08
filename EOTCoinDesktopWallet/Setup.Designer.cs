@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setup));
             this.EOTCoinWalletLabel = new System.Windows.Forms.Label();
             this.EOTPictureBox = new System.Windows.Forms.PictureBox();
@@ -37,7 +38,11 @@
             this.remaininglabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EOTPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // EOTCoinWalletLabel
@@ -123,11 +128,35 @@
             this.PasswordBox.TabIndex = 7;
             this.PasswordBox.UseSystemPasswordChar = true;
             // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(786, 386);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(0, 17);
+            this.ConnectedLabel.TabIndex = 8;
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(851, 386);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 9;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // ConnectedTimer
+            // 
+            this.ConnectedTimer.Enabled = true;
+            this.ConnectedTimer.Interval = 1500;
+            this.ConnectedTimer.Tick += new System.EventHandler(this.ConnectedTimer_Tick);
+            // 
             // Setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 409);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.remaininglabel);
@@ -144,6 +173,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EOT Wallet Setup";
             ((System.ComponentModel.ISupportInitialize)(this.EOTPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +189,8 @@
         private System.Windows.Forms.Label remaininglabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordBox;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
+        private System.Windows.Forms.Timer ConnectedTimer;
     }
 }

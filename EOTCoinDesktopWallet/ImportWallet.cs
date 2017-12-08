@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NBitcoin;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace EOTCoinDesktopWallet
         public ImportWallet()
         {
             InitializeComponent();
-            string filename = "Address";
+            string filename = "Address"; 
             filename.Replace(" ", "");
             filename = filename + ".txt";
 
@@ -25,6 +26,10 @@ namespace EOTCoinDesktopWallet
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void ImportButton_Click(object sender, EventArgs e)
@@ -57,7 +62,6 @@ namespace EOTCoinDesktopWallet
                 string eotPrivateKey = keyPair.ElementAt(0);
                 string eotAddress = keyPair.ElementAt(1);
                 Wallet eotWallet = new Wallet(eotPrivateKey, eotAddress, seed);
-                
                 string file1 = @"wallet.eot";
                 string file2 = @"Address.txt";
 
@@ -103,6 +107,22 @@ namespace EOTCoinDesktopWallet
                 newUser.Show();
 
                 this.Hide();
+            }
+        }
+
+        private void ConnectedTimer_Tick(object sender, EventArgs e)
+        {
+            bool connected = Utilities.CheckInternetConnectivity();
+
+            if (connected)
+            {
+                ConnectedLabel.Text = "Online";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.online;
+            }
+            else
+            {
+                ConnectedLabel.Text = "Offline";
+                ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
             }
         }
     }

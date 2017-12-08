@@ -37,12 +37,16 @@
             this.publicLabel = new System.Windows.Forms.Label();
             this.BalanceLabel1 = new System.Windows.Forms.Label();
             this.BalanceLabel2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OptionsButton = new System.Windows.Forms.Button();
             this.VersionLabel = new System.Windows.Forms.Label();
             this.CopyButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectionTimer = new System.Windows.Forms.Timer(this.components);
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,18 +126,6 @@
             this.BalanceLabel2.TabIndex = 8;
             this.BalanceLabel2.Text = "0.0";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(273, 256);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // OptionsButton
             // 
             this.OptionsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,11 +141,11 @@
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(524, 410);
+            this.VersionLabel.Location = new System.Drawing.Point(516, 410);
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(80, 17);
+            this.VersionLabel.Size = new System.Drawing.Size(88, 17);
             this.VersionLabel.TabIndex = 12;
-            this.VersionLabel.Text = "Version 1.0";
+            this.VersionLabel.Text = "Version 1.01";
             // 
             // CopyButton
             // 
@@ -181,11 +173,49 @@
             this.timer1.Interval = 300000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(389, 410);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(12, 17);
+            this.ConnectedLabel.TabIndex = 15;
+            this.ConnectedLabel.Text = " ";
+            // 
+            // ConnectionTimer
+            // 
+            this.ConnectionTimer.Enabled = true;
+            this.ConnectionTimer.Interval = 1500;
+            this.ConnectionTimer.Tick += new System.EventHandler(this.ConnectionTimer_Tick);
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.InitialImage = null;
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(435, 410);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 16;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(273, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // EOTCoinWalletDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 436);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.CopyButton);
             this.Controls.Add(this.VersionLabel);
@@ -206,6 +236,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EOT Coin Wallet";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,6 +257,9 @@
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.Timer ConnectionTimer;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
     }
 }
 

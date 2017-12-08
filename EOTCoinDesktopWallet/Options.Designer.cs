@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Options));
             this.ExportButton = new System.Windows.Forms.Button();
             this.ImportButton = new System.Windows.Forms.Button();
             this.DashboardButton = new System.Windows.Forms.Button();
             this.GenerateWalletButton = new System.Windows.Forms.Button();
+            this.ConnectedLabel = new System.Windows.Forms.Label();
+            this.ConnectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectedTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ExportButton
@@ -83,11 +88,35 @@
             this.GenerateWalletButton.UseVisualStyleBackColor = true;
             this.GenerateWalletButton.Click += new System.EventHandler(this.GenerateWalletButton_Click);
             // 
+            // ConnectedLabel
+            // 
+            this.ConnectedLabel.AutoSize = true;
+            this.ConnectedLabel.Location = new System.Drawing.Point(341, 313);
+            this.ConnectedLabel.Name = "ConnectedLabel";
+            this.ConnectedLabel.Size = new System.Drawing.Size(0, 17);
+            this.ConnectedLabel.TabIndex = 15;
+            // 
+            // ConnectedPictureBox
+            // 
+            this.ConnectedPictureBox.Location = new System.Drawing.Point(393, 313);
+            this.ConnectedPictureBox.Name = "ConnectedPictureBox";
+            this.ConnectedPictureBox.Size = new System.Drawing.Size(30, 17);
+            this.ConnectedPictureBox.TabIndex = 16;
+            this.ConnectedPictureBox.TabStop = false;
+            // 
+            // ConnectedTimer
+            // 
+            this.ConnectedTimer.Enabled = true;
+            this.ConnectedTimer.Interval = 1500;
+            this.ConnectedTimer.Tick += new System.EventHandler(this.ConnectedTimer_Tick);
+            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 333);
+            this.ClientSize = new System.Drawing.Size(429, 337);
+            this.Controls.Add(this.ConnectedPictureBox);
+            this.Controls.Add(this.ConnectedLabel);
             this.Controls.Add(this.GenerateWalletButton);
             this.Controls.Add(this.DashboardButton);
             this.Controls.Add(this.ImportButton);
@@ -98,7 +127,9 @@
             this.Name = "Options";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EOT Coin Wallet";
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectedPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +139,8 @@
         private System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.Button DashboardButton;
         private System.Windows.Forms.Button GenerateWalletButton;
+        private System.Windows.Forms.Label ConnectedLabel;
+        private System.Windows.Forms.PictureBox ConnectedPictureBox;
+        private System.Windows.Forms.Timer ConnectedTimer;
     }
 }
