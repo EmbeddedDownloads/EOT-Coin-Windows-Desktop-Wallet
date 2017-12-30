@@ -80,7 +80,7 @@ namespace EOTCoinDesktopWallet
             EOTCoinWalletDashboard dashboard = new EOTCoinWalletDashboard();
             dashboard.Show();
 
-            this.Close();
+            this.Hide();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -121,6 +121,14 @@ namespace EOTCoinDesktopWallet
                 ConnectedLabel.Text = "Offline";
                 ConnectedPictureBox.Image = EOTCoinDesktopWallet.Properties.Resources.offline;
             }
+        }
+
+        private void PasswordVault_Click(object sender, EventArgs e)
+        {
+            PasswordVault passwordvault = new PasswordVault();
+            passwordvault.Show();
+
+            this.Hide();
         }
     }
 }

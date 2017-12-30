@@ -1,0 +1,26 @@
+EOTCoinDesktopWallet/bin/Debug/Address.txt
+*.exe
+*.exe
+EOTCoinDesktopWallet/bin/Debug/EOTCoinDesktopWallet.exe
+*.pdb
+EOTCoinDesktopWallet/bin/Debug/EOTCoinDesktopWallet.vshost.exe.manifest
+EOTCoinDesktopWallet/bin/Debug/EOTCoinDesktopWallet.vshost.exe.config
+EOTCoinDesktopWallet/bin/Debug/wallet.eot
+EOTCoinDesktopWallet/obj/Debug/EOTCoinDesktopWallet.exe
+EOTCoinDesktopWallet/obj/Debug/EOTCoinDesktopWallet.pdb
+EOTCoinDesktopWallet/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+EOTCoinDesktopWallet/obj/Debug/EOTCoinDesktopWallet.csproj.FileListAbsolute.txt
+EOTCoinDesktopWallet/obj/Debug/EOTCoinDesktopWallet.csproj.GenerateResource.Cache
+EOTCoinDesktopWallet/bin/Debug/app.publish/Application Files/EOTCoinDesktopWallet_2_0_0_0/EOT-3.ico.deploy
+EOTCoinDesktopWallet/bin/Debug/app.publish/Application Files/EOTCoinDesktopWallet_2_0_0_0/EOTCoinDesktopWallet.exe.config.deploy
+EOTCoinDesktopWallet/bin/Debug/app.publish/Application Files/EOTCoinDesktopWallet_2_0_0_0/EOTCoinDesktopWallet.exe.deploy
+EOTCoinDesktopWallet/bin/Debug/app.publish/Application Files/EOTCoinDesktopWallet_2_0_0_0/EOTCoinDesktopWallet.exe.manifest
+*.deploy
+*.application
+*.exe
+EOTCoinDesktopWallet/bin/Debug/EOTCoinDesktopWallet.exe.manifest
+*.pdb
+EOTCoinDesktopWallet/EOTCoinDesktopWallet_TemporaryKey.pfx
+*.p12
+*.eot
+EOTCoinDesktopWallet/obj/Debug/DesignTimeResolveAssemblyReferences.cache

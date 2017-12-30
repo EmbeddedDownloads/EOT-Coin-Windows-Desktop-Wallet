@@ -107,7 +107,7 @@ namespace EOTCoinDesktopWallet
             Transactions txns = new Transactions();
             txns.Show();
 
-            this.Close();
+            this.Hide();
         }
         
         private void ConnectedLabel_Click(object sender, EventArgs e)
