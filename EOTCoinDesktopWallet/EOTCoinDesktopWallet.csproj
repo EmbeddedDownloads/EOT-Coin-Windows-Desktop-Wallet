@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CryptoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CryptoDoc.Designer.cs">
+      <DependentUpon>CryptoDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="EOTCoinWalletDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </Compile>
     <Compile Include="Utilities.cs" />
     <Compile Include="Wallet.cs" />
+    <EmbeddedResource Include="CryptoDoc.resx">
+      <DependentUpon>CryptoDoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EOTCoinWalletDashboard.resx">
       <DependentUpon>EOTCoinWalletDashboard.cs</DependentUpon>
     </EmbeddedResource>

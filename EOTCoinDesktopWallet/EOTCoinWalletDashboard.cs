@@ -130,5 +130,33 @@ namespace EOTCoinDesktopWallet
 
             this.Hide();
         }
+
+        private void CryptoDocButton_Click(object sender, EventArgs e)
+        {
+            CryptoDoc cryptodoc = new CryptoDoc();
+            cryptodoc.Show();
+
+            this.Hide();
+        }
+
+        private void VersionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConnectedPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void publicLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

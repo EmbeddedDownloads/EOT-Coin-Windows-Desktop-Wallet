@@ -24,3 +24,4 @@ EOTCoinDesktopWallet/EOTCoinDesktopWallet_TemporaryKey.pfx
 *.p12
 *.eot
 EOTCoinDesktopWallet/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.exe

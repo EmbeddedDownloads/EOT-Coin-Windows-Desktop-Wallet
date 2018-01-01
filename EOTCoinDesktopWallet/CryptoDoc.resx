@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="CryptoDocOpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EncryptFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Click on the lock image to selct a File that you want to Encrypt. This will create an encrypted version of the File in the same folder. If you want to delete the original file after encryption click on the Delete File after encryption check box</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Click on the unlock image to selct a File that you want to Decrypt. This will recover your original unencrypted version of the File in the same folder. If you want to delete the encrypted file after decryption click on the Delete File after decryption check box</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEhIAAAEAIACABQAAFgAAACgAAAASAAAAJAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAPJcAAAAAAABklkEedJ3GGXOg5A9tmvgwfaP5HHOd5AtrmscEapdEAAAAAABc
+        mQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAScJsiC2ycyEuIp/80fqP/T4uq/x90n/81gKX/U42r/2Wb
+        tv8/hqr/DGybyAFplyUAAAAAEnGaAAAAAAAadpoAAAAAAAltmTQWcJ3/V4ql/yZ2n/8AZ5z/AHWo/wCB
+        tP8AgrX/AHWp/wBkmv9mmrT/aJ23/xlznv8KbJkxAAAAACd+mgAAAAAAK4CbChZynvp1nrT/BmeZ/wCC
+        tf8AjMD/AI7D/wCRxv8Ak8n/AJXL/wCWzf8Bir//AWaZ/2KYtP8fcpv3D3CYEQAAAAD///8AAmeZ4ip6
+        o/8cdqL/AIO1/wCJu/8Air3/AIzA/wCOw/8AkMX/AJPI/wCVy/8AmM//AI/F/w1unv9dk6//HHOf3wAA
+        AAAHaZk9AGaZ/wBkmP8Aeqz/AIO0/wCGuP8AiLr/AIq9/wCMwP8AjsP/AJDF/wCTyf8Alcv/AJfO/wCC
+        t/8YcZ3/AGWZ/wZqmUwFaZmUAGaZ/wBsoP8Af67/AICw/wCDtP8Ahrj/AIi7/wCKvf8AjMD/AI7D/wCQ
+        xf8Aksn/AJXL/wCZ0P8AaZv/AGaZ/wRomZsDaJnYAGaZ/wB2pv8AeKb/AHyr/w6HtP9Wm7T/HY23/0ab
+        uv89lbb/AIzA/yaYwv8AkMX/AJLJ/wCWzP8Af7T/AGaZ/wNomdACZ5n5AGaZ/wB2pf8AdaL/AHmn/zOW
+        vP91o7T/G4+6/1amxP9CmLn/Bou8/2isxv8AjcP/AJHF/wCTyf8Aib7/AGaZ/wNomfgDZ5n5AGaZ/wB1
+        pP8Acp7/AHaj/zKTuP9cmrH/D4Wy/0iYtf9Fn8L/Cou7/2eqw/8AjMD/AI/D/wCRxv8AiL3/AGaZ/wRo
+        mfgDaJnXAGaZ/wBzov8Ab5j/AHKf/wZ5pf8eg6n/CH+s/xaFr/8bjLb/Fo25/x6Puv8Njbz/AIzA/wCQ
+        xP8AfrH/AGaZ/wNnmdAFaZmSAGaZ/wBtoP8Ab5n/AHCa/wBzn/8AdqP/AHmn/wB8q/8AgK//AIO0/wCG
+        uP8AiLr/AIq9/wCPw/8Aap3/AGaZ/wNomZoHaZk6AWeZ/wxrmv8Ac6L/AGyV/wBwm/8Ac57/AHaj/wB5
+        p/8AfKv/AICv/wCDtP8Ahrj/AIi7/wB+sf8AZZj/AGaZ/wdqmUoAAAAAGHGd6FuUsf8FaZv/AHSg/wBr
+        lP8AcJr/AHOe/wB1o/8Aeaf/AHyr/wB/sP8Ag7T/AIi6/yB3ov8xfaP/A2iZ4gAAAAAAAAAACGyYFRVv
+        nPdqnLX/Ammc/wFxn/8AcJr/AG+Z/wBznv8AdaL/AHin/wCAr/8Aeqz/AWib/26asP4jeKP7Dm6ZGAAA
+        AAAAAAAAAGCZAAxtm0USb535W5az/1aTs/8DbJ7/AHOk/wB2pf8AeKf/AHan/wRsnv8acZ3/W4uk/x51
+        oPoNbphDAAAAAAAAAAAAAAAAZKGYAAAAAAAQb5kVBGmZ6EKGqf9worz/Y5av/zaApv8id6L/Vo2q/yd5
+        of8we6H/Cmua5xNzmhYAAAAACmyZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANpmDwZcp2TIneg1yN3
+        ofgNbJv5JHmi1yd3npM2gaM8AAAAAAAAAAAAAAAAAAAAAAAAAAD4B8AA4AHAAMAAwACAAEAAgABAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAIAAQADAAMAA4AHAAPgHwAA=
+</value>
+  </data>
+</root>
